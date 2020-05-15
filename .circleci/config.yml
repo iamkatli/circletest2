@@ -7,6 +7,7 @@ jobs:
     steps:
       - checkout
       - run: 'docker build -t iamkatli/webserver .'
+      - run: 'echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin'
 workflows:
   scan-image:
     jobs:
