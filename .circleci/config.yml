@@ -6,7 +6,7 @@ jobs:
     executor: microscanner/default
     steps:
       - checkout
-      - run: 'docker build -t iamkatli/webserver'
+      - run: 'docker build -t iamkatli/webserver .'
 workflows:
   scan-image:
     jobs:
